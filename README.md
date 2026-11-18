@@ -3,6 +3,7 @@
 [![CI](https://github.com/karthikeyanvcb/nickerson-lit-synth/actions/workflows/ci.yml/badge.svg)](https://github.com/karthikeyanvcb/nickerson-lit-synth/actions/workflows/ci.yml)
 [![PyPI](https://img.shields.io/pypi/v/nickerson-lit-synth.svg)](https://pypi.org/project/nickerson-lit-synth/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24355538.svg)](https://doi.org/10.5281/zenodo.24355538)
 
 Evidence-verified, LLM-assisted literature coding for **taxonomy** and
 **Systematization of Knowledge (SoK)** studies, built around the taxonomy
