@@ -17,3 +17,4 @@ htmlcov/
 pdfs/
 results/
 *.pdf
+.DS_Store
