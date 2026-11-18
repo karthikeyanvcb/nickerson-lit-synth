@@ -1,0 +1,81 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[project]
+name = "nickerson-lit-synth"
+version = "0.1.0"
+description = "LLM-assisted, evidence-verified literature coding for taxonomy and SoK studies following Nickerson et al. (2013)."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+authors = [{ name = "Karthikeyan Velusamy" }]
+keywords = [
+    "taxonomy",
+    "systematic literature review",
+    "systematization of knowledge",
+    "SoK",
+    "Nickerson",
+    "LLM",
+    "Claude",
+    "PDF",
+    "LaTeX",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Text Processing :: Markup :: LaTeX",
+    "Typing :: Typed",
+]
+dependencies = [
+    "anthropic>=0.40",
+    "pydantic>=2.6",
+    "pymupdf>=1.24",
+    "pyyaml>=6.0",
+    "typer>=0.12",
+]
+
+[project.optional-dependencies]
+dev = [
+    "build>=1.2",
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "ruff>=0.6",
+    "twine>=5.0",
+]
+
+[project.scripts]
+nickerson-synth = "nickerson_synth.cli:app"
+
+[project.urls]
+Homepage = "https://github.com/karthikeyanvcb/nickerson-lit-synth"
+Issues = "https://github.com/karthikeyanvcb/nickerson-lit-synth/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/nickerson_synth"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "README.md", "LICENSE", "CHANGELOG.md", "CITATION.cff"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+filterwarnings = ["ignore::DeprecationWarning:pymupdf.*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF"]
+ignore = ["B008"]  # typer uses function calls in defaults

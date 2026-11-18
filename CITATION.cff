@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "nickerson-lit-synth: evidence-verified LLM literature coding for taxonomy studies"
+authors:
+  - family-names: Velusamy
+    given-names: Karthikeyan
+version: 0.1.0
+date-released: 2026-11-18
+license: MIT
+repository-code: "https://github.com/karthikeyanvcb/nickerson-lit-synth"
+references:
+  - type: article
+    authors:
+      - family-names: Nickerson
+        given-names: Robert C.
+      - family-names: Varshney
+        given-names: Upkar
+      - family-names: Muntermann
+        given-names: Jan
+    title: "A method for taxonomy development and its application in information systems"
+    journal: "European Journal of Information Systems"
+    volume: 22
+    issue: 3
+    start: 336
+    end: 359
+    year: 2013
+    doi: 10.1057/ejis.2012.26
